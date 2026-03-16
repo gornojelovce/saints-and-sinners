@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="lightyellow">
+	<title>Saints and Sinners | Main Menu</title>
+	<link rel="icon" type="image/x-icon" href="../icon.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="instructions">
+		<p>You are a junior criminal investigator working for the La Cascada Detective Agency. Your agency has recieved a very difficult case and solving this case would mean a generous promotion for you. Your boss has told you:</p>
+		<p>"<span id="prompt"></span> Find the killer."</p>
+		<p>You may take help from the following people to collect evidence and solve this case.</p>
+		<ul>
+			<li><a href="lib.html">Librarian</a> - newspapers and historical records.</li>
+			<li><a href="pd.html">Chief of Police</a> - police report and testimonies of suspects</li>
+			<li><a href="gi.html">Friend at General Informations</a> - call records and letters</li>
+			<li><a href="eng.html">Head Engineer</a> - maps and CCTV footages of crime scenes and other places.</li>
+			<li><a href="exin.html">Ex Investigator</a> - personal histories of important people and hints.</li>
+		</ul>
+		<p>Good Luck to you!</p>
+	</div>
+	<script>
+		const savedPrompt = localStorage.getItem("SSprompt");
+		let promtText = savedPrompt;
+		const promptList = [
+			"A young man was murdered last night in Tina Chase's café.",
+			"Businessman Giovanni Romano's son was found dead. Victim's brother Carlos Martinéz is prime suspect.",
+			"Mr. Connor Quinn is suspect in a murder that happened in a café in his area.",
+			"Marco Romano was killed recently."
+		];
+		if (savedPrompt == null) {
+			promtText = promptList[Math.floor(Math.random() * promptList.length)];
+			localStorage.setItem("SSprompt", promtText);	
+		}
+		document.getElementById("prompt").textContent = promtText;
+	</script>
+</body>
+</html>
