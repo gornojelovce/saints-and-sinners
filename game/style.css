@@ -37,16 +37,14 @@ a:hover {
 
 
 .content {
-	margin: 10vw 0;
-	display: none;
+	/*display: none;*/
 }
 
-
+/*
 li:focus .content {
 	display: unset;
-
 }
-
+*/
 li > p {
 	color: red;
 	cursor: pointer;
