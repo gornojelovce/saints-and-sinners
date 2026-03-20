@@ -37,14 +37,14 @@ a:hover {
 
 
 .content {
-	/*display: none;*/
+	display: none;
 }
 
-/*
+
 li:focus .content {
 	display: unset;
 }
-*/
+
 li > p {
 	color: red;
 	cursor: pointer;
@@ -68,4 +68,9 @@ img {
 
 h2 {
 	font-size: 18px;
+}
+
+#hints ol {
+	text-align: left;
+	line-height: 2.5;
 }
